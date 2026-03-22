@@ -1,0 +1,124 @@
+/* Contenedor del componente de gestión de roles */
+.role-management-container {
+  padding: 30px;
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.role-management-container h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Estilo para la tabla */
+.role-management-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.role-management-table thead {
+  background-color: #3498db;
+  color: white;
+}
+
+.role-management-table th, .role-management-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.role-management-table th {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.role-management-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.role-management-table tbody tr:hover {
+  background-color: #e0f7fa;
+  transition: background-color 0.3s;
+}
+
+/* Estilo para los selectores de rol */
+.role-select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.role-select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.role-select:hover {
+  background-color: #f0f8ff;
+}
+
+/* Paginación */
+.pagination-nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+
+.page-item {
+  display: inline;
+  margin: 0 5px;
+}
+
+.page-link {
+  color: #3498db;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.page-item.active .page-link {
+  background-color: #2980b9;
+  color: white;
+  border: 1px solid #2980b9;
+}
+
+.page-item.disabled .page-link {
+  color: #ccc;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .role-management-container {
+    padding: 20px;
+  }
+
+  .role-management-table th, .role-management-table td {
+    padding: 10px;
+  }
+
+  .role-select {
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7fa;
+}
+
+/* Personalización de las notificaciones toast */
+.Toastify__toast {
+  border-radius: 8px !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.Toastify__toast--success {
+  background-color: #2ecc71 !important;
+}
+
+.Toastify__toast--error {
+  background-color: #e74c3c !important;
+}
+
+.Toastify__progress-bar {
+  height: 4px !important;
+} 

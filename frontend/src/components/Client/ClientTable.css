@@ -1,0 +1,143 @@
+/* Contenedor principal con diseño moderno */
+.client-table-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f6f9fc 0%, #f1f5f9 100%);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+}
+
+.client-table-container h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  background: linear-gradient(45deg, #2c3e50 30%, #3498db 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* Tabla moderna */
+.client-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.client-table thead {
+  background: linear-gradient(45deg, #2c3e50 30%, #34495e 90%);
+}
+
+.client-table th {
+  padding: 18px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.client-table td {
+  padding: 16px;
+  border-bottom: 1px solid #edf2f7;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.client-table tr:hover {
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+/* Botones modernos */
+.client-table button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-button {
+  
+  color: white;
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+.edit-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.4);
+}
+
+.delete-button {
+  background: linear-gradient(45deg, #e74c3c 30%, #c0392b 90%);
+  color: white;
+  box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
+}
+
+.delete-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(231, 76, 60, 0.4);
+}
+
+/* Paginación moderna */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.page-button {
+  background: linear-gradient(45deg, #3498db 30%, #2980b9 90%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+.page-button.active {
+  background: linear-gradient(45deg, #2c3e50 30%, #34495e 90%);
+  transform: scale(1.05);
+}
+
+.page-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .client-table-container {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .client-table th, 
+  .client-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .client-table-container h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,123 @@
+.client-projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8e3031;
+  }
+  
+  .project-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-item {
+    background-color: #fff;
+    border: 1px solid #ebedf3;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-item h2 {
+    margin-top: 0;
+    color: #3f4254;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .project-item p {
+    margin: 8px 0;
+    color: #7e8299;
+  }
+  
+  .btn-details {
+    background-color: #8e3031;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: auto;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-details:hover {
+    background-color: #592d2d;
+  }
+  
+  .project-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .status-completed {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+  }
+  
+  .status-in-progress {
+    background-color: rgba(142, 48, 49, 0.1);
+    color: #8e3031;
+  }
+  
+  .status-pending {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+  }
+  
+  .project-progress {
+    margin: 15px 0;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background-color: rgba(142, 48, 49, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #8e3031;
+    border-radius: 4px;
+  }
+  
+  .project-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #7e8299;
+    font-size: 0.9rem;
+  }
+  

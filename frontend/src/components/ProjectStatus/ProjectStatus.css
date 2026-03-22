@@ -1,0 +1,81 @@
+.project-status-container {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Roboto', sans-serif;
+  color: #592d2d;
+}
+
+.search-input {
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.search-input .MuiOutlinedInput-root {
+  transition: all 0.3s ease;
+}
+
+.search-input .MuiOutlinedInput-root:hover {
+  background-color: rgba(89, 45, 45, 0.04);
+}
+
+.search-input .MuiOutlinedInput-root.Mui-focused {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(89, 45, 45, 0.1);
+}
+
+.CircularProgressbar-path {
+  stroke: #592d2d !important;
+}
+
+.CircularProgressbar-trail {
+  stroke: rgba(89, 45, 45, 0.1) !important;
+}
+
+.CircularProgressbar-text {
+  fill: #592d2d !important;
+}
+
+.view-button:hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  color: #000000 !important;
+}
+
+.MuiTableCell-root {
+  padding: 16px;
+}
+
+.MuiTableRow-root:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.MuiChip-root {
+  font-weight: 500;
+}
+
+.MuiTypography-caption {
+  display: block;
+  color: #666;
+}
+
+.MuiTableHead-root .MuiTableRow-root {
+  background-color: #f5f5f5;
+}
+
+.MuiTableCell-head {
+  font-weight: 600 !important;
+  color: #333;
+}
+
+.MuiButton-contained {
+  background-color: #000000 !important;
+}
+
+.MuiButton-contained:hover {
+  background-color: #333333 !important;
+}
+
+.MuiIconButton-root {
+  color: #000000 !important;
+}

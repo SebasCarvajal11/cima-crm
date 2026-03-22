@@ -1,0 +1,26 @@
+#Serverless framework yml 
+
+service: serverless-aws-nodejs
+
+useDotenv: true
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: developer
+  region: us-east-1
+
+functions:
+    app:
+      handler: src/index.handler
+      events:
+        - http:
+            path: /
+            method: ANY
+        - http:
+            path: /{proxy+}
+            method: ANY
+

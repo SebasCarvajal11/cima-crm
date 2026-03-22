@@ -1,0 +1,37 @@
+/* WorkerProjects.css */
+.project-card:hover {
+  box-shadow: 0 8px 24px rgba(142, 48, 49, 0.15);
+}
+
+.dialog-title {
+  background-color: #8e3031;
+  color: white;
+}
+
+.section-title {
+  color: #8e3031;
+  font-weight: 600;
+}
+
+.view-details-button:hover {
+  background-color: rgba(142, 48, 49, 0.1);
+}
+
+/* Custom scrollbar for the tasks modal */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8e3031;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #592d2d;
+}

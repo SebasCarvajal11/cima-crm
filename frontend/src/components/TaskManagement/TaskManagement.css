@@ -1,0 +1,318 @@
+/* Container General */
+.task-management-container {
+  padding: 32px;
+  background: linear-gradient(135deg, #f4f6f8 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+/* Tabs */
+.task-tabs {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Encabezado */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.task-header-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Filtros */
+.task-filters {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+.date-range-filter {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Grid de Tareas */
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+  padding: 16px;
+}
+
+/* Tarjeta de Tarea */
+.task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.task-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.task-checkbox {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  width: 100%;
+}
+.task-card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+.task-card-description {
+  flex-grow: 1;
+  margin-bottom: 16px;
+  color: #546e7a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.task-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #78909c;
+  border-top: 1px solid #eceff1;
+  padding-top: 12px;
+}
+.task-worker-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* Adjust task actions positioning */
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+}
+.task-date {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+.delete-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  
+}
+
+/* Nombre y Icono del Proyecto */
+.task-project-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.task-project-icon {
+  color: #64748b;
+}
+
+/* Chips de Estado */
+.task-status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.task-status-pending {
+  background-color: #fff8e1;
+  color: #f57c00;
+  border: 1px solid #ffb74d;
+}
+.task-status-progress {
+  background-color: #e3f2fd;
+  color: #000000;
+  border: 1px solid #000000;
+}
+.task-status-completed {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #81c784;
+}
+
+/* Contenedor de Carga */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .task-management-container {
+    padding: 16px;
+  }
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+  .task-filters {
+    flex-direction: column;
+  }
+}
+
+/* ===================== */
+/* ESTILOS DE ESTADÍSTICAS */
+/* ===================== */
+.stats-container {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f5f7fa;
+  text-align: center;
+}
+.stat-card h6 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+.stat-card h3 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+.stats-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 24px;
+  text-align: center;
+  gap: 16px;
+}
+.stat-item {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  min-width: 100px;
+}
+.stat-item.completed {
+  background-color: #e8f5e9;
+}
+.stat-item.in-progress {
+  background-color: #e3f2fd;
+}
+.stat-item.pending {
+  background-color: #fff8e1;
+}
+.stats-list {
+  margin-top: 16px;
+}
+.stats-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eceff1;
+}
+.stats-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Opcional: Tarjetas adicionales para estadísticas */
+.stats-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.stats-info-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+.stats-info-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.stats-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-right: 12px;
+}
+.stats-info-icon.project {
+  background-color: rgba(33, 150, 243, 0.2);
+  color: #000000;
+}
+.stats-info-icon.worker {
+  background-color: rgba(156, 39, 176, 0.2);
+  color: #7b1fa2;
+}
+.stats-info-icon.efficiency {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #388e3c;
+}
+.stats-info-icon.task-per-project {
+  background-color: rgba(255, 152, 0, 0.2);
+  color: #f57c00;
+}
+.stats-info-content h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+.stats-info-content p {
+  margin: 4px 0 0;
+  color: rgba(0, 0, 0, 0.6);
+}
