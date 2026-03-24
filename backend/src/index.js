@@ -1,6 +1,7 @@
 // index.js
 
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const userRouter = require('./modules/user/user-router');
 const clientRouter= require('./modules/client/client-router')
@@ -11,6 +12,7 @@ const fileRouter = require('./modules/file-upload/file-upload-router'); // Updat
 
 app.use(express.json());
 
+app.use(cors());
 app.use('/users', userRouter);
 app.use('/clients', clientRouter);
 app.use('/projects', projectRouter)
