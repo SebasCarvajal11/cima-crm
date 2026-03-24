@@ -3,18 +3,14 @@ import axios from 'axios';
 
 // Thunk para obtener la lista de usuarios
 export const fetchUsers = createAsyncThunk('roles/fetchUsers', async () => {
-  const response = await axios.get('/api/users'); // Cambia a tu endpoint real
+  const response = await axios.get(`${import.meta.env.VITE_API_URL}/users`, { headers: { 'accesstoken': localStorage.getItem('accessToken') } });
   return response.data;
 });
 
-// Thunk para actualizar el rol de un usuario
-export const updateRole = createAsyncThunk(
-  'roles/updateRole',
-  async ({ userId, role }) => {
-    const response = await axios.put(`/api/users/${userId}/role`, { role }); // Cambia a tu endpoint real
-    return response.data;
-  }
-);
+export const updateRole = createAsyncThunk('roles/updateRole', async ({ userId, role }) => {
+  const response = await axios.put(`${import.meta.env.VITE_API_URL}/users/${userId}`, { role }, { headers: { 'accesstoken': localStorage.getItem('accessToken') } });
+  return response.data;
+});
 const roleSlice = createSlice({
     name: 'roles',
     initialState: {

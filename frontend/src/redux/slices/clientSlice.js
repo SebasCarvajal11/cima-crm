@@ -1,21 +1,18 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Acción para obtener todos los clientes
 export const fetchClients = createAsyncThunk('clients/fetchAll', async () => {
-  const response = await axios.get('/api/users');
+  const response = await axios.get(`${import.meta.env.VITE_API_URL}/users`, { headers: { 'accesstoken': localStorage.getItem('accessToken') } });
   return response.data;
 });
 
-// Acción para obtener el historial de un cliente
 export const fetchClientHistory = createAsyncThunk('clients/fetchHistory', async (clientId) => {
-  const response = await axios.get(`/api/clients/${clientId}/history`);
+  const response = await axios.get(`${import.meta.env.VITE_API_URL}/clients/${clientId}/history`, { headers: { 'accesstoken': localStorage.getItem('accessToken') } });
   return response.data;
 });
 
-// Acción para obtener un cliente por ID
 export const getClientById = createAsyncThunk('clients/getById', async (clientId) => {
-  const response = await axios.get(`/api/clients/${clientId}`);
+  const response = await axios.get(`${import.meta.env.VITE_API_URL}/clients/${clientId}`, { headers: { 'accesstoken': localStorage.getItem('accessToken') } });
   return response.data;
 });
 

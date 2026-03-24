@@ -30,7 +30,7 @@ const FaqClient = () => {
     const fetchFaqs = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/faqs/all',
+          `${import.meta.env.VITE_API_URL}/faqs/all`,
           {
             headers: { 'accesstoken': accessToken }
           }
