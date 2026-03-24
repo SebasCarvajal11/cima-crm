@@ -1,6 +1,5 @@
 // index.js
 
-const serverless = require('serverless-http');
 const express = require('express');
 const app = express();
 const userRouter = require('./modules/user/user-router');
@@ -24,4 +23,7 @@ app.use((req, res, next) => {
     });
 });
 
-module.exports.handler = serverless(app);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor de CIMA CRM corriendo en el puerto ${PORT}`);
+});
