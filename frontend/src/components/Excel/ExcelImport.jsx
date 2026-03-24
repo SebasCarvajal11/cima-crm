@@ -184,7 +184,7 @@ const ExcelImport = ({ projectId = 42 }) => {
 
     try {
       const response = await axios.get(
-        `https://cima-crm.onrender.com/developer/files/project/${projectId}`,
+        `${import.meta.env.VITE_API_URL}/files/project/${projectId}`,
         {
           headers: { 'accesstoken': token }
         }
@@ -214,7 +214,7 @@ const ExcelImport = ({ projectId = 42 }) => {
       // Make request to download endpoint
       const response = await axios({
         method: 'get',
-        url: `https://cima-crm.onrender.com/developer/files/download/${fileId}`,
+        url: `${import.meta.env.VITE_API_URL}/files/download/${fileId}`,
         headers: { 'accesstoken': token },
       });
       
@@ -271,7 +271,7 @@ const ExcelImport = ({ projectId = 42 }) => {
       
       // Delete file using API
       await axios.delete(
-        `https://cima-crm.onrender.com/developer/files/${fileId}`,
+        `${import.meta.env.VITE_API_URL}/files/${fileId}`,
         {
           headers: { 'accesstoken': token }
         }
@@ -317,7 +317,7 @@ const ExcelImport = ({ projectId = 42 }) => {
 
       try {
         const response = await axios.post(
-          `https://cima-crm.onrender.com/developer/files/${selectedProject}`,
+          `${import.meta.env.VITE_API_URL}/files/${selectedProject}`,
           formData,
           {
             headers: {

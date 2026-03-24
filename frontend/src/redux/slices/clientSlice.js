@@ -31,7 +31,7 @@ export const createClient = createAsyncThunk('clients/create', async (newClient)
 
 // Acción para actualizar un cliente
 export const updateClient = createAsyncThunk('clients/update', async ({ id, updatedClient }) => {
-  const response = await axios.put(`https://cima-crm.onrender.com/developer/clients/${id}`, updatedClient,{
+  const response = await axios.put(`${import.meta.env.VITE_API_URL}/clients/${id}`, updatedClient,{
     headers:{
       'accesstoken':localStorage.getItem('accessToken'),
     }
@@ -42,7 +42,7 @@ export const updateClient = createAsyncThunk('clients/update', async ({ id, upda
 // Acción para eliminar un cliente
 export const deleteClient = createAsyncThunk('clients/delete', async (clientId, { rejectWithValue }) => {
   try {
-    const response = await axios.delete(`https://cima-crm.onrender.com/developer/clients/${clientId}`, {
+    const response = await axios.delete(`${import.meta.env.VITE_API_URL}/clients/${clientId}`, {
       headers: {
         'accesstoken': localStorage.getItem('accessToken'),
       },

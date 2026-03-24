@@ -233,7 +233,7 @@ const WorkerProjects = () => {
   const handleStatusChange = async (projectId, newStatus) => {
     try {
       await axios.put(
-        `https://cima-crm.onrender.com/developer/projects/${projectId}/status`,
+        `${import.meta.env.VITE_API_URL}/projects/${projectId}/status`,
         { status: newStatus },
         { headers: { 'accesstoken': accessToken } }
       );
@@ -264,7 +264,7 @@ const WorkerProjects = () => {
         return;
       }
       const response = await axios.get(
-        `https://cima-crm.onrender.com/developer/projects/${projectId}/worker/tasks`, // Updated endpoint
+        `${import.meta.env.VITE_API_URL}/projects/${projectId}/worker/tasks`, // Updated endpoint
         {
           headers: { 'accesstoken': accessToken }
         }

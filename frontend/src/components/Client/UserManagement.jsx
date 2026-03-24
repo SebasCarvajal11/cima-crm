@@ -406,7 +406,7 @@ const UserManagement = () => {
 
         // Actualizar cliente existente con el endpoint correcto usando clientId
         await axios.put(
-          `https://cima-crm.onrender.com/developer/clients/${clientId}`,
+          `${import.meta.env.VITE_API_URL}/clients/${clientId}`,
           updateData,
           {
             headers: {
@@ -463,7 +463,7 @@ const UserManagement = () => {
       console.log('Attempting to delete client with ID:', clientId);
       
       // Eliminar cliente con el endpoint correcto usando clientId
-      await axios.delete(`https://cima-crm.onrender.com/developer/clients/${clientId}`, {
+      await axios.delete(`${import.meta.env.VITE_API_URL}/clients/${clientId}`, {
         headers: {
           'Content-Type': 'application/json',
           'accesstoken': token
