@@ -4,7 +4,7 @@ import axios from 'axios'; // Para hacer las solicitudes HTTP
 // Acción asincrónica para manejar el login
 export const login = createAsyncThunk('auth/login', async (credentials, { rejectWithValue }) => {
   try {
-    const response = await axios.post('${import.meta.env.VITE_API_URL}/users/login', credentials, {
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/users/login`, credentials, {
       headers: {
         'Content-Type': 'application/json',
       },
