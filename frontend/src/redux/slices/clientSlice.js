@@ -21,7 +21,7 @@ export const getClientById = createAsyncThunk('clients/getById', async (clientId
 
 // Acción para crear un cliente
 export const createClient = createAsyncThunk('clients/create', async (newClient) => {
-  const response = await axios.post('${import.meta.env.VITE_API_URL}/users/register', newClient,{
+  const response = await axios.post(`${import.meta.env.VITE_API_URL}/users/register`, newClient,{
     headers:{
       'accesstoken':localStorage.getItem('accessToken'),
     }

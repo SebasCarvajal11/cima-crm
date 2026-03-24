@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { store } from '../redux/store';
 
-const API_URL = '${import.meta.env.VITE_API_URL}/faqs';
+const API_URL = `${import.meta.env.VITE_API_URL}/faqs`;
 
 // Helper function to get the authentication token from Redux store
 const getAuthToken = () => {

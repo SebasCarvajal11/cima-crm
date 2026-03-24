@@ -105,7 +105,7 @@ const AdminDashboard = () => {
         const config = {
           method: 'post',
           maxBodyLength: Infinity,
-          url: '${import.meta.env.VITE_API_URL}/users/register',
+          url: `${import.meta.env.VITE_API_URL}/users/register`,
           headers: { 
             'Content-Type': 'application/json', 
             'Authorization': '••••••' // Ajusta el token o credenciales según corresponda

@@ -41,7 +41,7 @@ const ProjectStatus = ({ userRole }) => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('${import.meta.env.VITE_API_URL}/projects', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/projects`, {
           headers: {
             'accesstoken': localStorage.getItem('accessToken')
           }

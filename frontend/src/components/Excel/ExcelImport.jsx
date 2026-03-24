@@ -144,7 +144,7 @@ const ExcelImport = ({ projectId = 42 }) => {
     try {
       const token = localStorage.getItem('accessToken');
       const response = await axios.get(
-        '${import.meta.env.VITE_API_URL}/projects',
+        `${import.meta.env.VITE_API_URL}/projects`,
         {
           headers: { 'accesstoken': token }
         }

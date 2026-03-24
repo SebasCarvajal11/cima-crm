@@ -110,7 +110,7 @@ const ProjectForm = ({ open, onClose, onSubmit, project = null }) => {
         setError(null);
         
         // Use axios to fetch clients directly from the endpoint
-        const response = await axios.get('${import.meta.env.VITE_API_URL}/clients', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/clients`, {
           headers: {
             'accesstoken': localStorage.getItem('accessToken') // Assuming you store the token in localStorage
           }

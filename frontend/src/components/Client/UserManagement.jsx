@@ -245,7 +245,7 @@ const UserManagement = () => {
       try {
         setLoading(true);
         // Changing the endpoint from /developer/clients to /clients
-        const response = await axios.get('${import.meta.env.VITE_API_URL}/clients', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/clients`, {
           headers: {
             'Content-Type': 'application/json',
             'accesstoken': token
@@ -362,7 +362,7 @@ const UserManagement = () => {
         // Usar axios directamente sin config
         const response = await axios({
           method: 'post',
-          url: '${import.meta.env.VITE_API_URL}/clients/register',
+          url: `${import.meta.env.VITE_API_URL}/clients/register`,
           headers: { 
             'Content-Type': 'application/json',
             'accesstoken': token
@@ -378,7 +378,7 @@ const UserManagement = () => {
         closeDialog();
         
         // Refrescar la lista de clientes después de crear uno nuevo
-        const refreshResponse = await axios.get('${import.meta.env.VITE_API_URL}/clients', {
+        const refreshResponse = await axios.get(`${import.meta.env.VITE_API_URL}/clients`, {
           headers: {
             'Content-Type': 'application/json',
             'accesstoken': token

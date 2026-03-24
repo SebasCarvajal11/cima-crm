@@ -147,7 +147,7 @@ const fetchAllWorkers = async () => {
     }
     
     const response = await axios.get(
-      '${import.meta.env.VITE_API_URL}/users/workers',
+      `${import.meta.env.VITE_API_URL}/users/workers`,
       {
         headers: {
           'accessToken': accessToken

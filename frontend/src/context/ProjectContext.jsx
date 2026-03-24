@@ -6,7 +6,7 @@ import qs from 'qs';
 
 export const ProjectContext = createContext();
 
-const API_BASE_URL = '${import.meta.env.VITE_API_URL}/projects';
+const API_BASE_URL = `${import.meta.env.VITE_API_URL}/projects`;
 
 export const ProjectProvider = ({ children }) => {
   const auth = useSelector((state) => state.auth);
@@ -232,7 +232,7 @@ export const ProjectProvider = ({ children }) => {
   const getAllClients = async () => {
     try {
       const response = await axiosInstance.get('/clients', {
-        baseURL: '${import.meta.env.VITE_API_URL}/projects'
+        baseURL: `${import.meta.env.VITE_API_URL}/projects`
       });
       
       //console.log.log('Respuesta de clientes:', response.data);

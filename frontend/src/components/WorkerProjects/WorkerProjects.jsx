@@ -213,7 +213,7 @@ const WorkerProjects = () => {
     const fetchProjects = async () => {
       try {
         const response = await axios.get(
-          '${import.meta.env.VITE_API_URL}/projects/worker/projects',
+          `${import.meta.env.VITE_API_URL}/projects/worker/projects`,
           {
             headers: { 'accesstoken': accessToken }
           }
