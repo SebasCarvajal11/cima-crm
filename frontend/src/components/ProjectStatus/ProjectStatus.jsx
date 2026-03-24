@@ -78,7 +78,7 @@ const ProjectStatus = ({ userRole }) => {
       console.log('Project ID:', projectId); // Verificar el ID
       console.log('Access Token:', localStorage.getItem('accessToken')); // Verificar el token
 
-      const response = await axios.get(`http://localhost:3000/developer/projects/${projectId}/progress`, {
+      const response = await axios.get(`https://cima-crm.onrender.com/developer/projects/${projectId}/progress`, {
         headers: {
           'accesstoken': localStorage.getItem('accessToken')
         }

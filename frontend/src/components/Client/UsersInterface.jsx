@@ -321,7 +321,7 @@ const UsersInterface = ({ token }) => {
           
           // Update user using the correct endpoint
           const response = await axios.put(
-            `http://localhost:3000/developer/users/${userId}`,
+            `https://cima-crm.onrender.com/developer/users/${userId}`,
             updateData,
             {
               headers: {
@@ -376,7 +376,7 @@ const UsersInterface = ({ token }) => {
       console.log('Attempting to delete user with ID:', userId);
       
       // Eliminar usuario
-      await axios.delete(`http://localhost:3000/developer/users/${userId}`, {
+      await axios.delete(`https://cima-crm.onrender.com/developer/users/${userId}`, {
         headers: {
           'Content-Type': 'application/json',
           'accesstoken': token

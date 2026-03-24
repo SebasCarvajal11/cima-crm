@@ -113,7 +113,7 @@ const TaskManagement = () => {
   const fetchAllProjects = async () => {
     try {
       // Using the correct endpoint for projects
-      const response = await axios.get(`http://localhost:3000/developer/projects`, getHeaders());
+      const response = await axios.get(`https://cima-crm.onrender.com/developer/projects`, getHeaders());
       
       if (response.data.success && Array.isArray(response.data.projects)) {
         setAllProjects(response.data.projects, "esto es response");
