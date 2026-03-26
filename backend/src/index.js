@@ -18,6 +18,11 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization', 'accesstoken'],
   credentials: true
 }));
+
+app.get('/ping', (req, res) => {
+    res.status(200).send('OK');
+});
+
 app.use('/users', userRouter);
 app.use('/clients', clientRouter);
 app.use('/projects', projectRouter)
