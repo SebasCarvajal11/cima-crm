@@ -133,11 +133,13 @@ exports.getProjectById = async (projectId) => {
 // Guardar proyecto
 exports.saveProject = async (projectData) => {
     try {
+        const now = new Date().toISOString().slice(0, 19).replace('T', ' ');
+        
         const dataToSave = {
             ...projectData,
             status: projectData.status || 'Pending',
-            createdAt: new Date(),
-            updatedAt: new Date()
+            createdAt: now,
+            updatedAt: now
         };
 
         const result = await save('PROJECTS', dataToSave, null, exports.projectEntity);
